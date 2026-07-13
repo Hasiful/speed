@@ -1,5 +1,25 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/cgu",
+      "destination": "/cgu/index.html"
+    },
+    {
+      "source": "/mentions-legales",
+      "destination": "/mentions-legales/index.html"
+    },
+    {
+      "source": "/politique-de-confidentialite",
+      "destination": "/politique-de-confidentialite/index.html"
+    }
+  ]
 }
