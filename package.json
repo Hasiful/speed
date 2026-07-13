@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "node scripts/build.mjs",
     "mirror": "node scripts/mirror.mjs",
     "start": "node server.mjs",
     "test": "node scripts/verify.mjs"

@@ -13,6 +13,16 @@ npm.cmd start
 
 Open <http://localhost:4173>.
 
+## Deploy to Vercel
+
+```powershell
+npm.cmd run build
+```
+
+This creates a `dist/` folder that Vercel can publish as a static site. The
+repo includes a `vercel.json` file, so after importing the Git repository into
+Vercel you can keep the default settings and deploy.
+
 ## Refresh public assets
 
 ```powershell
