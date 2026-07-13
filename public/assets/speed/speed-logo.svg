@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 112" role="img" aria-labelledby="title">
+  <title id="title">Speed Energy Drink</title>
+  <rect width="460" height="112" rx="8" fill="#050505"/>
+  <path d="M8 62h66l12-30 18 58 18-42 15 14h315" fill="none" stroke="#e21b23" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="134" y="79" fill="#fff" font-family="Arial Black, Impact, sans-serif" font-size="68" font-style="italic" font-weight="900" letter-spacing="-5">SPEED</text>
+</svg>

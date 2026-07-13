@@ -1,0 +1,11 @@
+{
+  "name": "ciao-energy-frontend-clone",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mirror": "node scripts/mirror.mjs",
+    "start": "node server.mjs",
+    "test": "node scripts/verify.mjs"
+  }
+}
