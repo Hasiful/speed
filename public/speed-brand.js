@@ -6,7 +6,7 @@
   document.head.append(link);
 
   document.documentElement.lang = 'en';
-  document.title = 'Speed Energy Drink — Feel the Rush';
+  document.title = 'Speed Energy Drink - Feel the Rush';
 
   const setMeta = (selector, content) => {
     const element = document.head.querySelector(selector);
@@ -14,10 +14,10 @@
   };
   const description = 'Speed is a bold 250 ml carbonated energy drink from Bangladesh with caffeine, taurine and vitamins.';
   setMeta('meta[name="description"]', description);
-  setMeta('meta[property="og:title"]', 'Speed Energy Drink — Feel the Rush');
+  setMeta('meta[property="og:title"]', 'Speed Energy Drink - Feel the Rush');
   setMeta('meta[property="og:description"]', description);
   setMeta('meta[property="og:image"]', assetRoot + 'speed-can.webp');
-  setMeta('meta[name="twitter:title"]', 'Speed Energy Drink — Feel the Rush');
+  setMeta('meta[name="twitter:title"]', 'Speed Energy Drink - Feel the Rush');
   setMeta('meta[name="twitter:description"]', description);
 
   const structuredData = document.querySelector('script[type="application/ld+json"]');
@@ -74,10 +74,10 @@
   });
 
   const benefitCopy = [
-    ['× SLOW MODE', 'EXTRA<br>STRENGTH', 'A bold energy drink for long days, late nights and every high-tempo moment in between.'],
-    ['× LOW CHARGE', 'CAFFEINE<br>BOOST', 'Caffeine is part of the formula designed to deliver the familiar lift people expect from an energy drink.'],
-    ['× LOSING FOCUS', 'TAURINE<br>FORMULA', 'Taurine joins the energy blend in the signature black 250 ml Speed can.'],
-    ['× RUNNING EMPTY', 'B<br>VITAMINS', 'Vitamins complete a fast, refreshing carbonated drink made to keep up with your pace.'],
+    ['X SLOW MODE', 'EXTRA<br>STRENGTH', 'A bold energy drink for long days, late nights and every high-tempo moment in between.'],
+    ['X LOW CHARGE', 'CAFFEINE<br>BOOST', 'Caffeine is part of the formula designed to deliver the familiar lift people expect from an energy drink.'],
+    ['X LOSING FOCUS', 'TAURINE<br>FORMULA', 'Taurine joins the energy blend in the signature black 250 ml Speed can.'],
+    ['X RUNNING EMPTY', 'B<br>VITAMINS', 'Vitamins complete a fast, refreshing carbonated drink made to keep up with your pace.'],
   ];
   document.querySelectorAll('.section.is-benefits').forEach((section, index) => {
     const copy = benefitCopy[index];
@@ -92,7 +92,7 @@
 
   const faqs = [
     ['What is Speed Energy Drink?', 'Speed is a 250 ml carbonated energy drink made in Bangladesh. It is designed for a quick energy boost and a more alert feeling.'],
-    ['What is inside Speed?', 'The published product information lists caffeine, taurine and vitamins among the drink’s key ingredients.'],
+    ['What is inside Speed?', 'The published product information lists caffeine, taurine and vitamins among the drink\'s key ingredients.'],
     ['Is Speed carbonated?', 'Yes. Speed is an extra-strength carbonated beverage with a bold, refreshing energy-drink taste.'],
     ['How should I serve it?', 'Speed is best enjoyed chilled. Refrigerate the can before opening for the coldest, sharpest refreshment.'],
     ['Where is Speed made?', 'Speed Energy Drink is a product of Bangladesh.'],
@@ -115,13 +115,13 @@
 
   const exactText = new Map([
     ['Gamme', 'The Drink'],
-    ['Bénéfices', 'The Boost'],
+    ['Benefits', 'The Boost'],
     ['FAQ', 'FAQ'],
     ['Newsletter', 'Stay Charged'],
-    ['Scroller pour découvrir', 'Scroll to feel the speed'],
+    ['Scroll to discover', 'Scroll to feel the speed'],
     ['REJOIGNEZ-NOUS', 'STAY CHARGED'],
     ['VOTRE ADRESSE MAIL', 'YOUR EMAIL ADDRESS'],
-    ["S'INSCRIRE", 'SIGN UP'],
+    ['S\'INSCRIRE', 'SIGN UP'],
   ]);
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   let textNode;
@@ -136,13 +136,20 @@
   if (newsletterText) newsletterText.textContent = 'Join the Speed community for product news, drops and high-energy updates.';
 
   document.querySelectorAll('.text-size-tiny').forEach((node) => {
-    if (node.textContent.includes('CIAO ENERGY')) node.textContent = '© 2026 SPEED ENERGY';
+    if (node.textContent.includes('©')) node.textContent = '© 2026 SPEED ENERGY';
   });
 
   const hiddenH1 = document.querySelector('h1');
-  if (hiddenH1) hiddenH1.textContent = 'Speed Energy Drink — Feel the Rush';
+  if (hiddenH1) hiddenH1.textContent = 'Speed Energy Drink - Feel the Rush';
 
-  document.querySelectorAll('a[href*="ciaoenergy.com"], a[href*="instagram.com/ciaoenergy"], a[href*="tiktok.com/@ciaoenergy"]').forEach((link) => {
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.href = 'mailto:contact@speedenergy.com';
+    if (link.textContent.includes('@')) {
+      link.textContent = 'contact@speedenergy.com';
+    }
+  });
+
+  document.querySelectorAll('a[href*="instagram.com"], a[href*="tiktok.com"], a[href*="youtube.com"]').forEach((link) => {
     link.href = '#gamme';
   });
 

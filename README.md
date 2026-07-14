@@ -1,6 +1,6 @@
-# Ciao Energy frontend clone
+# Speed Energy showcase
 
-A local, frontend-only mirror of the publicly visible Ciao Energy showcase. The
+A local, frontend-only Speed Energy showcase. The
 visual assets, 3D scene, typography, motion, sound design, and responsive Webflow
 layout are served locally. The linked legal pages are included, while newsletter
 submission and analytics are intentionally disabled.

@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const sourceUrl = 'https://www.ciaoenergy.com/';
+const sourceUrl = 'https://www.speedenergy.com/';
 const pageRoutes = ['', 'mentions-legales', 'cgu', 'politique-de-confidentialite'];
 const allowedAssetHosts = new Set([
   'cdn.prod.website-files.com',
